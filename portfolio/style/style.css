@@ -50,6 +50,9 @@
 
   /* Size*/
   --size-border-radius:10px;
+
+  /* Animation*/
+  --animation-duration: 300ms;
 }
 
 /* Universal Tag */
@@ -167,6 +170,7 @@ p {
   background:url("../image/portfolio_background.png")center/cover no-repeat;
   padding: 50px;
   text-align: center;
+  max-width:1800px;
 }
 
 .home__avatar{
@@ -193,3 +197,46 @@ p {
 .home__contact:hover{
   background: var(--color-light-grey);
 }
+
+/* Section common*/
+section{
+  padding:50px;
+  text-align:center;
+  max-width:1200px;
+  margin:auto;
+}
+
+/* About */
+
+.about__majors{
+  display:flex;
+  justify-content: space-between;
+  margin: 80px 0;
+}
+
+.major__icon{
+  width:170px;
+  height:170px;
+  font-size: 70px;
+  line-height: 170px;
+  margin:auto;
+  border: 2px solid var(--color-pupple);
+  color:var(--color-pupple);
+  border-radius:50%;
+}
+
+.major__title{
+  margin:10px;
+  font-size: var(--font-medium);
+}
+
+.major__icon:hover i{
+  color: var(--color-light-grey);
+  transform:rotate(-20deg) scale(1.2);
+  transition: var(--animation-duration);
+}
+
+
+
+
+
