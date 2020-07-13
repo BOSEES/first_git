@@ -60,7 +60,7 @@ h1 {
 
   font-weight: var(--weight-bold);
 
-  color: var(--color-black);
+  color:var(--color-black);
 
   margin: 16px 0px;
 
@@ -101,4 +101,3 @@ p {
   margin: 4px 0;
 
 }
-
