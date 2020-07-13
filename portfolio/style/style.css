@@ -2,6 +2,7 @@
 
 :root{
       /* Color */
+  --color-pupple:#7732a8;
 
   --color-white: #ffffff;
 
@@ -47,9 +48,27 @@
 
   --weight-regular: 400;
 
+  /* Size*/
+  --size-border-radius:10px;
 }
 
+/* Universal Tag */
+a{
+  text-decoration: none;
+  color:var(--color-white);
 
+}
+
+ul{
+  list-style:none;
+  margin:0px;
+}
+
+body{
+  margin:0px;
+  font-family: 'Open Sans', sans-serif;
+  cursor:default;
+}
 
 
 /* Typography */
@@ -100,4 +119,40 @@ p {
 
   margin: 4px 0;
 
+}
+
+/* Navbar */
+
+#navbar{
+    display: flex;
+    justify-content: space-between;
+    background:var(--color-pupple);
+    align-items: center;
+    color: var(--color-white);
+    padding: 16px ;
+}
+
+.navbar__menu{
+  display:flex;
+}
+
+.navbar__menu__item{
+  margin:0px 4px;
+  padding: 8px 12px;
+  cursor: pointer;
+  border-radius: var(--size-border-radius);
+}
+
+.navbar__logo{
+  font-size: var(--font-medium);
+  font-weight: var(--weight-semi-bold);
+}
+
+.navbar__menu__item.active{
+  border: 1px solid var(--color-white);
+  border-radius: var(--size-border-radius);
+}
+
+.navbar__menu__item:hover{
+  background-color: var(--color-light-grey);
 }
