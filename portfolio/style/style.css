@@ -421,3 +421,28 @@ transform:translateY(0px);
   color:purple;
 }
 
+/* contact */
+
+#contact{
+  background-color: var(--color-pupple);
+}
+
+.contact__title,
+.contact__email,
+.contact__rights{
+  color:var(--color-white);
+}
+
+.contact__title{
+  margin:30px 0;
+}
+
+.contact__links{
+  font-size: var(--font-large);
+  margin:20px;
+}
+
+.contact__links i:hover{
+  transform:scale(1.2);
+  color:var(--color-dark-white);
+}
