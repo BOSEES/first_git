@@ -134,18 +134,28 @@ p {
 /* Navbar */
 
 #navbar{
-    display: flex;
-    justify-content: space-between;
-    background:var(--color-pupple);
-    align-items: center;
-    color: var(--color-white);
-    padding: 16px ;
+  position: fixed;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  background-color:transparent;
+  align-items: center;
+  color: var(--color-white);
+  padding: 16px;
+  transition:all var(--animation-duration) ease-in-out;
+  z-index:2;
+}
+
+#navbar.navbar--dark{
+  background-color: var(--color-pupple);
 }
 
 .navbar__menu{
   display:flex;
 }
-
+.navbar__menu ul{
+  margin: 0px 20px;
+}
 .navbar__menu__item{
   margin:0px 4px;
   padding: 8px 12px;
@@ -155,6 +165,7 @@ p {
 
 .navbar__toggle-btn{
   top:20px;
+  margin-right: 20px;
   position: absolute;
   right:32px;
   font-size: 24px;
@@ -179,7 +190,7 @@ p {
 /* home */
 #home{
   background:url("../image/portfolio_background.png")center/cover no-repeat;
-  padding: 50px;
+  padding: 80px;
   text-align: center;
   max-width:1800px;
 }
@@ -306,6 +317,7 @@ section{
 
 .work__categories{
   margin:40px;
+  z-index:1;
 }
 
 .categories__btn{
@@ -474,7 +486,6 @@ transform:translateY(0px);
     width:100%;
     display: none;
   }
-
   .about__majors{
     flex-direction: column;
   }
