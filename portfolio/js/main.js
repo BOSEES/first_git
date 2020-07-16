@@ -30,3 +30,12 @@ menuTap.addEventListener("click", function(event){
     scrollTo.scrollIntoView({behavior:"smooth"});
 });
 
+
+//Contact me tapping to moving
+
+const homeContactBtm = document.querySelector(".home__contact");
+
+homeContactBtm.addEventListener("click", function(){
+    const scrollTo = document.querySelector("#contact");
+    scrollTo.scrollIntoView({behavior:"smooth"});
+});
