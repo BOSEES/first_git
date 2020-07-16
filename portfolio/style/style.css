@@ -468,6 +468,28 @@ transform:translateY(0px);
   color:var(--color-dark-white);
 }
 
+/* Arrow up */
+.arrow-up{
+  position: fixed;
+  bottom: 50px;
+  right:50px;
+  font-size:50px;
+  border-radius: 50%;
+  width:50px;
+  height:50px;
+  color:var(--color-white);
+  background-color: plum;
+  opacity:0;
+  transition: opacity 300ms ease-in;
+  pointer-events: none;
+  outline: 0;
+}
+
+.arrow-up.visible{
+  opacity:1;
+  pointer-events: auto;
+}
+
 /* for below 768 screen width */
 
 @media screen and (max-width:768px){

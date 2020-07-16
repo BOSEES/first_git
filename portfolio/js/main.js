@@ -13,6 +13,23 @@ document.addEventListener("scroll", function(){
     }  
 });
 
+// Arrow Button to Scroll Up
+const arrowUpBtn = document.querySelector(".arrow-up");
+
+document.addEventListener("scroll", function(){
+    if(window.scrollY > navbarHeight) {
+        arrowUpBtn.classList.add("visible");
+    } else {
+        arrowUpBtn.classList.remove("visible");
+    }
+});
+
+arrowUpBtn.addEventListener("click",function(){
+    const scrollTo = document.querySelector("#home");
+    scrollTo.scrollIntoView({behavior:"smooth"});
+});
+
+
 // Navbar menus tapping to moving
 
 const menuTap = document.querySelector(".navbar__menu");
