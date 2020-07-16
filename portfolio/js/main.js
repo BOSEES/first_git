@@ -12,3 +12,21 @@ document.addEventListener("scroll", function(){
         navbar.classList.remove("navbar--dark");
     }  
 });
+
+// Navbar menus tapping to moving
+
+const menuTap = document.querySelector(".navbar__menu");
+
+menuTap.addEventListener("click", function(event){
+    const target = event.target;
+    const link = target.dataset.link;
+    
+    if(link == null){
+        return
+    }
+
+    console.log(event.target.dataset.link);
+    const scrollTo = document.querySelector(link);
+    scrollTo.scrollIntoView({behavior:"smooth"});
+});
+
