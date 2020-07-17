@@ -178,7 +178,7 @@ p {
   font-weight: var(--weight-semi-bold);
 }
 
-.navbar__menu__item.{
+.navbar__menu__item{
   border-radius: var(--size-border-radius);
 }
 
@@ -508,16 +508,27 @@ transform:translateY(0px);
   }
 
   #navbar{
+    padding: 16px 16px 16px 0px;
     flex-direction: column;
     align-items: flex-start;
+    background-color: var(--color-pupple);
+  }
+
+  .navbar__menu ul{
+    margin:0px;
   }
 
   .navbar__menu{
     flex-direction: column;
     text-align: center;
     width:100%;
-    display: none;
+    display:block;
   }
+
+  .navbar__menu.open{
+    display:none;
+  }
+  
   .about__majors{
     flex-direction: column;
   }

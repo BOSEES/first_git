@@ -74,10 +74,17 @@ menuTap.addEventListener("click", function(event){
     if(link == null){
         return
     }
-
+    menuTap.classList.add("open");
     console.log(event.target.dataset.link);
     const scrollTo = document.querySelector(link);
     scrollTo.scrollIntoView({behavior:"smooth"});
+});
+
+//Navbar toggle button for small screen
+
+const navbarToggleBtn = document.querySelector(".navbar__toggle-btn");
+navbarToggleBtn.addEventListener("click", function(){
+    menuTap.classList.toggle("open");
 });
 
 
