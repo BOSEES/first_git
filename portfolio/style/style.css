@@ -178,7 +178,7 @@ p {
   font-weight: var(--weight-semi-bold);
 }
 
-.navbar__menu__item.active{
+.navbar__menu__item.{
   border-radius: var(--size-border-radius);
 }
 
@@ -327,12 +327,12 @@ section{
   padding:8px 48px;
 }
 
-.categories__btn.active,
+.categories__btn.selected,
 .categories__btn:hover{
   background-color: var(--color-light-grey);
   color:var(--color-white);
 }
-.categories__btn.active .categories__count,
+.categories__btn.selected .categories__count,
 .categories__btn:hover .categories__count{
   opacity: 1;
   top: 0;

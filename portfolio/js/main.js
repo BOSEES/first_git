@@ -31,13 +31,20 @@ const projects = document.querySelectorAll(".project");
 
 projectBtnContainer.addEventListener("click", function(e){
     const filter = e.target.dataset.filter || e.target.parentNode.dataset.filter;
-    let project;
     if(filter == null) {
         return;
     }
 
+    // Cycle effects with selected buttons
+
+    const active = document.querySelector(".categories__btn.selected");
+    active.classList.remove("selected");
+    const target = e.target.nodeName === "BUTTON" ? e.target :e.target.parentNode;
+    target.classList.add("selected");
+
     projectContainer.classList.add("anim-out");
 
+    let project;
     setTimeout(function(){
     for(let i = 0; i < projects.length; i++){
         project = projects [i];
