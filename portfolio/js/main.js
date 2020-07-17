@@ -24,14 +24,40 @@ document.addEventListener("scroll", function(){
     }
 });
 
+// project
+const projectBtnContainer = document.querySelector(".work__categories");
+const projectContainer = document.querySelector(".work__projects");
+const projects = document.querySelectorAll(".project");
+
+projectBtnContainer.addEventListener("click", function(e){
+    const filter = e.target.dataset.filter || e.target.parentNode.dataset.filter;
+    let project;
+    if(filter == null) {
+        return;
+    }
+
+    projectContainer.classList.add("anim-out");
+
+    setTimeout(function(){
+    for(let i = 0; i < projects.length; i++){
+        project = projects [i];
+        if(filter === "*" || filter === project.dataset.type){
+            project.classList.remove("invisible");
+        } else {
+            project.classList.add("invisible");
+        }
+    }
+        projectContainer.classList.remove("anim-out");
+    },300);
+});
+
+
 arrowUpBtn.addEventListener("click",function(){
     const scrollTo = document.querySelector("#home");
     scrollTo.scrollIntoView({behavior:"smooth"});
 });
 
-
 // Navbar menus tapping to moving
-
 const menuTap = document.querySelector(".navbar__menu");
 
 menuTap.addEventListener("click", function(event){
@@ -49,7 +75,6 @@ menuTap.addEventListener("click", function(event){
 
 
 //Contact me tapping to moving
-
 const homeContactBtm = document.querySelector(".home__contact");
 
 homeContactBtm.addEventListener("click", function(){
